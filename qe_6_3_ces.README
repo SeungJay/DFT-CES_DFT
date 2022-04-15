@@ -2,10 +2,13 @@ DFT-CES install procedure for QE6.3
 
 1.Copy dft-ces.f90 to the PW/src folder
 
-2.Go to the PW/src dir (e.g. .../qe6.3/PW/src/ )
+2.Go to the Modules dir (e.g. .../qe6.3/Modules)
+patch -p2 < ../../Mod.patch
+
+3.Go to the PW/src dir (e.g. .../qe6.3/PW/src/ )
 patch -p3 < ../../../PW.patch
 
-3. Go to the PP/src dir (e.g. .../qe6.3/PP/src/ )
+4. Go to the PP/src dir (e.g. .../qe6.3/PP/src/ )
 patch -p3 < ../../../PP.patch
 # The PP patch file should be used carefully.
 # When this patch is applied, the dipole correction potential is not plotted together. 
